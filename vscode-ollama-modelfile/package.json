@@ -1,0 +1,28 @@
+{
+  "name": "ollama-modelfile",
+  "displayName": "Ollama Modelfile Syntax",
+  "description": "Syntax highlighting for Ollama's Modelfile format.",
+  "version": "1.0.0",
+  "publisher": "jim-ing",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ollama-modelfile",
+        "aliases": ["Ollama Modelfile", "Modelfile"],
+        "extensions": [".Modelfile", ".modelfile"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ollama-modelfile",
+        "scopeName": "source.ollama-modelfile",
+        "path": "./syntaxes/ollama-modelfile.tmLanguage.json"
+      }
+    ]
+  }
+}

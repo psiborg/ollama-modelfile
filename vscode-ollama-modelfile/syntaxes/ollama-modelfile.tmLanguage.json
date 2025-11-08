@@ -1,0 +1,64 @@
+{
+  "name": "Ollama Modelfile",
+  "scopeName": "source.ollama-modelfile",
+  "patterns": [
+    {
+      "match": "^\\s*#.*$",
+      "name": "comment.line.number-sign.ollama"
+    },
+    {
+      "match": "^\\s*(FROM|LICENSE|TEMPLATE|SYSTEM|PARAMETER|ADAPTER|MODEL|MOUNT|MESSAGE)\\b",
+      "name": "keyword.control.directive.ollama"
+    },
+    {
+      "begin": "\"\"\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.ollama"
+        }
+      },
+      "end": "\"\"\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.ollama"
+        }
+      },
+      "name": "string.quoted.triple.ollama"
+    },
+    {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.ollama"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.ollama"
+        }
+      },
+      "name": "string.quoted.double.ollama"
+    },
+    {
+      "match": "\\b\\d+(\\.\\d+)?\\b",
+      "name": "constant.numeric.ollama"
+    },
+    {
+      "match": "\\b(true|false|yes|no|on|off)\\b",
+      "name": "constant.language.boolean.ollama"
+    },
+    {
+      "match": "^\\s*([A-Z_]+):",
+      "captures": {
+        "1": {
+          "name": "entity.name.section.ollama"
+        }
+      },
+      "name": "meta.section.ollama"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["Modelfile", "modelfile"],
+  "uuid": "f42b5c90-92f3-11ef-9b3c-9f3dcbff77b4"
+}
